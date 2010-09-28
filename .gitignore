@@ -3,6 +3,9 @@
 
 # But not these files...
 !.vim*
+!.vim
+!.vim/
+!.vim/*
 !.bashrc
 !.bash_profile
 !.bash_logout
