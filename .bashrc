@@ -3,7 +3,7 @@
 # User specific aliases and functions
 
 alias ls='ls -GlaF'
-alias git='hub'
+alias git=hub
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -33,4 +33,21 @@ PS2='> '
 PS4='+ '
 }
 
-if [[ -s /Users/jeffmcfadden/.rvm/scripts/rvm ]] ; then source /Users/jeffmcfadden/.rvm/scripts/rvm ; fi
+PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH:$HOME/bin:/Applications/ec2-api-tools/bin:/opt/local/bin:/opt/local/sbin
+
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export EC2_HOME=/Applications/ec2-api-tools
+export EC2_CERT=~/.ec2/cert-FEP7WJZ2U5HWPBZVXBMETW2BYMETGI6S.pem
+export EC2_PRIVATE_KEY=~/.ec2/pk-FEP7WJZ2U5HWPBZVXBMETW2BYMETGI6S.pem
+export PATH
+unset USERNAME
+
+
+#export PS1="\u@\h|\e[01;34m\w\e[00m $ "
+export PS1='[\u@\h|\e[01;34m\w$(__git_ps1 " (%s)")\e[01;0m]\$ '
+
+
+source ~/.git-completion.sh
+source ~/.git-flow-completion.sh
+
+if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
