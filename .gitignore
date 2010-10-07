@@ -11,5 +11,10 @@
 !.bash_logout
 !.gitignore
 
+!.git-completion.sh
+!.git-flow-completion.sh
+!.gitconfig
+
+
 
 .viminfo
